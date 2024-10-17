@@ -15,17 +15,6 @@
     color: #191919;
 }
 
-@keyframes start {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 100%;
-        transform: translateY(0);
-    }
-}
-
 body {
     background-color: var(--white);
     width: 100dvw;
@@ -38,7 +27,6 @@ body {
     gap: 1rem;
     margin: 0 auto;
     transform: 0.5;
-    animation: start 2s;
 }
 
 header {
