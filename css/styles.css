@@ -51,7 +51,6 @@ header {
     align-items: center;
     opacity: 0.4;
     transition: 0.2s;
-    cursor: pointer;
 }
 
 .links__header p:hover {
@@ -87,7 +86,6 @@ header {
 .role:hover {
     transform: translateY(-5px);
     outline: 2px solid var(--blue);
-    cursor: pointer;
 }
 
 .roles {
@@ -267,7 +265,6 @@ h2 span {
 .card_skill:hover {
     transform: translateY(-5px);
     outline: 2px solid var(--blue);
-    cursor: pointer;
 }
 
 .card_skill h4 {
