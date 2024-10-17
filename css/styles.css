@@ -1,22 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-    --white: #fafafa;
-    --fullwhite: #fff;
-    --black: #191919;
+    --bg: #fafafa;
+    --bg2: #fff;
+    --text2: #4b4b4b;
+    --text: #191919;
     --blue: #1330be;
+    --icons: var(--blue);
     --padding: 6rem;
+    --border: #ccc;
+    --btnhover: #7a9cef;
+    --footerlink: #1330be;
 }
 
 * {
     font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
-    color: #191919;
+    color: var(--text);
 }
 
 body {
-    background-color: var(--white);
+    background-color: var(--bg);
     width: 100dvw;
 }
 
@@ -31,7 +36,7 @@ body {
 
 header {
     padding: var(--padding);
-    border-bottom: #ccc 2px solid;
+    border-bottom: var(--border) 2px solid;
 }
 
 .header-info {
@@ -42,7 +47,21 @@ header {
 
 .links__header {
     display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
     gap: 2rem;
+}
+
+.links__header .fa-sun,
+.links__header .fa-moon {
+    font-size: 1.5rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.links__header .fa-sun:hover,
+.links__header .fa-moon:hover {
+    opacity: 0.5;
 }
 
 .links__header p {
@@ -101,7 +120,7 @@ header {
 
 .header_left .info {
     font-size: 1.2rem;
-    color: #4b4b4b;
+    color: var(--text2);
 }
 
 .header_right {
@@ -127,7 +146,7 @@ header {
 
 .btn {
     background-color: var(--blue);
-    color: var(--fullwhite);
+    color: var(--bg2);
     width: fit-content;
     padding: 1rem 2rem;
     border-radius: 8px;
@@ -140,7 +159,7 @@ header {
 
 .btn:hover {
     padding: 1rem 3rem;
-    background-color: #7a9cef;
+    background-color: var(--btnhover);
     transition: 0.6s ease;
 }
 
@@ -150,7 +169,7 @@ header {
 
 .about__me {
     padding: var(--padding);
-    border-bottom: #ccc 2px solid;
+    border-bottom: var(--border) 2px solid;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -186,7 +205,7 @@ h2 span {
     font-size: 0.9rem;
     font-style: italic;
     opacity: 0.7;
-    color: #1330be;
+    color: var(--footerlink);
 }
 
 .left .btns {
@@ -212,7 +231,7 @@ h2 span {
 
 .skills {
     height: 500px;
-    border-bottom: #ccc 2px solid;
+    border-bottom: var(--border) 2px solid;
     padding: var(--padding) var(--padding) 0 var(--padding);
     display: flex;
     flex-direction: column;
@@ -233,7 +252,7 @@ h2 span {
 }
 
 .cards .fa-brands {
-    color: var(--blue);
+    color: var(--icons);
 }
 
 .cards .fa-solid {
@@ -257,7 +276,7 @@ h2 span {
     height: 250px;
     border-radius: 8px;
     background-color: var(--fullwhite);
-    outline: 2px solid #e7e7e7;
+    outline: 2px solid var(--btnhover);
     box-shadow: 0 10px 20px #3b3b6d1d;
     transition: 0.2s;
 }
@@ -300,11 +319,22 @@ footer {
 
 footer .git {
     font-weight: 600;
-    color: var(--blue);
+    color: var(--footerlink);
 }
 
 .hidden {
     visibility: hidden;
+}
+
+.darkmode {
+    --bg: #191919;
+    --text: #ffffff;
+    --blue: #282828;
+    --icons: #fff;
+    --text2: #ffffff;
+    --border: #212121;
+    --btnhover: #5a5a5a;
+    --footerlink: #fff;
 }
 
 @media (max-width: 1024px) {
